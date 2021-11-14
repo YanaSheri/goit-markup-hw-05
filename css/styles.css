@@ -180,12 +180,14 @@ ul {
 .contacts-nav .link:hover,
 .contacts-nav .link:focus {
     color: var(--accent-color);
-}
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);}
 
 .contacts-nav .link:hover .svg-header,
 .contacts-nav .link:focus .svg-header {
     fill: currentColor;
-}
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);}
 
 
 /* =========== К О Н Т Е Н Т =========== */
@@ -423,12 +425,14 @@ ul {
 .team-icons-link:hover,
 .team-icons-link:focus {
     background-color: var(--accent-color);
-}
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);}
 
 .team-icons-link:hover .team-svg,
 .team-icons-link:focus .team-svg {
     fill: var(--white-text-color);
-}
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);}
 
 
 /* --- СЕКЦИЯ "ПОСТОЯННЫЕ КЛИЕНТЫ" --- */
@@ -464,12 +468,14 @@ ul {
 .clients-icons-link:hover,
 .clients-icons-link:focus {
     border: 1px solid var(--accent-color);
-}
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);}
 
 .clients-icons-link:hover .clients-svg,
 .clients-icons-link:focus .clients-svg {
     fill: var(--accent-color);
-}
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);}
 
 /* ================== FOOTER ===================== */
 
@@ -558,6 +564,8 @@ ul {
 .footer-icons-link:hover,
 .footer-icons-link:focus {
     background-color: var(--accent-color);
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 
@@ -594,6 +602,8 @@ ul {
     color: var(--white-text-color);
     background-color: var(--accent-color);
     box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* -- КАРТОЧКИ -- */
@@ -654,6 +664,8 @@ ul {
 .card-link:hover .card-img::before {
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
     opacity: 1;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* .card-link:hover .card-img::before {
