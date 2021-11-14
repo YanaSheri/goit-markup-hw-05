@@ -58,15 +58,12 @@ ul {
 /* ================= HEADER ================*/
 
 .header {
-    /* padding-top: 24px;
-    padding-bottom: 24px; */
     border-bottom: 1px solid #ECECEC;
 }
 
 .header-container {
     display: flex;
     justify-content: space-between;
-    /* align-items: baseline; */
     padding-top: 0;
     padding-bottom: 0;
     height: 80px;
@@ -74,8 +71,6 @@ ul {
 
 .nav {
     display: flex;
-    /* align-items: baseline; */
-
     height: 100%;
 }
 
@@ -105,7 +100,6 @@ ul {
 
 .site-nav {
     display: flex;
-    /* align-items: center; */
 
     height: 100%;
     font-weight: 500;
@@ -131,7 +125,6 @@ ul {
 
 .site-nav .link-current {
     position: relative;
-
     color: var(--accent-color);
 }
 
@@ -145,7 +138,6 @@ ul {
     height: 4px;
     background: #2196F3;
     border-radius: 2px;
-    /* bottom: 0; */
 }
 
 /* ------- БЛОК КОНТАКТОВ ------- */
@@ -194,15 +186,6 @@ ul {
 .contacts-nav .link:focus .svg-header {
     fill: currentColor;
 }
-
-/* попытка увеличить область кликабельности ссылок */
-/* .logo-link, */
-/* .link-current,
-.link {
-    display: block;
-    height: 80px;
-} */
-
 
 
 /* =========== К О Н Т Е Н Т =========== */
@@ -299,7 +282,6 @@ ul {
     line-height: 1.15;
     letter-spacing: 0.03em;
     text-transform: uppercase;
-
     margin-bottom: 10px;
 }
 
@@ -314,7 +296,6 @@ ul {
 
 .works {
     padding-top: 0;
-    /* outline: 2px dotted red; */
 }
 
 .works-list {
@@ -324,8 +305,42 @@ ul {
     margin-top: 50px;
 }
 
+/* .works-item {
+    position: relative;
+} */
+
 .works-item:not(:last-child) {
+    /* position: relative; */
     margin-right: 30px;
+}
+
+.works-item-link{
+    position: relative;
+
+    text-decoration: none;
+}
+
+/* .works-img {
+    display: block;
+} */
+
+.works-item-subblock {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    padding-top: 27px;
+    padding-bottom: 27px;
+    background-color: rgba(47, 48, 58, 0.8);
+}
+
+.works-item-title {
+    font-size: 14px;
+    line-height: 16px;
+    text-align: center;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+
+    color: var(--white-text-color);
 }
 
 /* --- СЕКЦИЯ "НАША КОМАНДА" --- */
@@ -417,10 +432,6 @@ ul {
 
 
 /* --- СЕКЦИЯ "ПОСТОЯННЫЕ КЛИЕНТЫ" --- */
-
-/* .clients-container {
-    
-} */
 
 .clients-list {
     display: flex;
@@ -549,10 +560,6 @@ ul {
     background-color: var(--accent-color);
 }
 
-/* .footer-icons-link:hover .team-svg {
-    fill: var(--white-text-color);
-} */
-
 
 /* =============== PORTFOLIO ============== */
 
@@ -599,6 +606,8 @@ ul {
 }
 
 .card {
+    position: relative;
+
     margin-bottom: 30px;
     border: 1px solid var(--portfolio-card-border-color);
 }
@@ -608,13 +617,33 @@ ul {
     display: block;
 }
 
-.card-link:hover {
-    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
-}
-
 .card-img {
+    position: relative;
     display: block;
 }
+
+.card-img::before {
+    display: inline-block;
+    position: absolute;
+    
+    content: '';
+    width: 100%;
+    height: 100%;
+
+    opacity: 0;
+    transition: 250ms opacity linear;
+    background-color: rgba(33, 150, 243, 0.9);;
+}
+
+.card-link:hover,
+.card-link:hover .card-img::before {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+    opacity: 1;
+}
+
+/* .card-link:hover .card-img::before {
+    opacity: 1;
+} */
 
 .card-footer {
     padding: 20px 24px;
