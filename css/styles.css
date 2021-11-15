@@ -144,14 +144,12 @@ ul {
 .contacts-nav {
     display: flex;
     align-items: baseline;
-
     height: 80px;
 }
 
 .contacts-nav .link {
     display: flex;
     align-items: center;
-
     height: 100%;
     color: var(--p-text-color);
     font-weight: 500;
@@ -568,6 +566,51 @@ ul {
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+/*  ============== MODAL ============== */
+
+.backdrop {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.modal {
+    position: absolute;
+    width: 580px;
+    min-height: 528px;
+    background-color: var(--button-bg-color);
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.close-btn {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 8px;
+    right: 8px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+
+.close-svg {
+    width: 18px;
+    height: 18px;
+    position: absolute;
+}
+
+.is-hidden {
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+}
 
 /* =============== PORTFOLIO ============== */
 
@@ -617,7 +660,6 @@ ul {
 
 .card {
     position: relative;
-
     margin-bottom: 30px;
     border: 1px solid var(--portfolio-card-border-color);
 }
@@ -628,29 +670,27 @@ ul {
     display: block;
 }
 
-
-
 .card-img {
     position: relative;
     display: block;
+    overflow: hidden;
 }
 
 .card-img::before {
     display: inline-block;
     position: absolute;
-    
     content: 'Технокряк это современная площадка распространения коронавируса. Компании используют эту платформу для цифрового шпионажа и атак на защищённые сервера конкурентов.';
     width: 100%;
     height: 100%;
-
-    opacity: 0;
-    transition: 250ms opacity linear;
+    top: 100%;
+    right: 0;
+    transition: top 300ms linear;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-property: top;
     background-color: rgba(33, 150, 243, 0.9);
-
     font-size: 18px;
     line-height: 1.56;
-    /* or 156% */
-
     letter-spacing: 0.03em;
     padding: 63px 24px;
     color: #FFFFFF;
@@ -663,14 +703,9 @@ ul {
 .card-link:hover,
 .card-link:hover .card-img::before {
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
-    opacity: 1;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    top: 0;
+    
 }
-
-/* .card-link:hover .card-img::before {
-    opacity: 1;
-} */
 
 .card-footer {
     padding: 20px 24px;
