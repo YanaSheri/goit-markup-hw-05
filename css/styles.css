@@ -121,6 +121,9 @@ ul {
     height: 100%;
     color: var(--primary-text-color);
     text-decoration: none;
+
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .site-nav .link-current {
@@ -157,11 +160,16 @@ ul {
     line-height: 16px;
     letter-spacing: 0.02em;
     text-decoration: none;
+
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .svg-header {
     margin-right: 10px;
     fill: var(--icon-color);
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .nav-item:not(:last-child) {
@@ -172,21 +180,24 @@ ul {
     margin-right: 48px;
 }
 
+/* .contacts-nav .link {
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+} */
+
 /* - ЭФФЕКТЫ ИНТЕРАКТИВНЫХ ЭЛЕМЕНТОВ ШАПКИ - */
 .site-nav .link:hover,
 .site-nav .link:focus,
 .contacts-nav .link:hover,
 .contacts-nav .link:focus {
     color: var(--accent-color);
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);}
+    
+}
 
 .contacts-nav .link:hover .svg-header,
 .contacts-nav .link:focus .svg-header {
     fill: currentColor;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);}
-
+}
 
 /* =========== К О Н Т Е Н Т =========== */
  /* -------- ГЕРОЙ -------- */
@@ -412,26 +423,28 @@ ul {
     border-radius: 50%;
     padding: 12px;
     justify-content: center;
+
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .team-svg {
     width: 20px;
     height: 20px;
     fill: var(--icon-color);
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .team-icons-link:hover,
 .team-icons-link:focus {
     background-color: var(--accent-color);
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);}
+}
 
 .team-icons-link:hover .team-svg,
 .team-icons-link:focus .team-svg {
     fill: var(--white-text-color);
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);}
-
+}
 
 /* --- СЕКЦИЯ "ПОСТОЯННЫЕ КЛИЕНТЫ" --- */
 
@@ -455,25 +468,27 @@ ul {
     border: 1px solid #AFB1B8;
     box-sizing: border-box;
     border-radius: 4px;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .clients-svg {
     width: 106px;
     height: 60px;
     fill: var(--icon-color);
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .clients-icons-link:hover,
 .clients-icons-link:focus {
     border: 1px solid var(--accent-color);
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);}
+}
 
 .clients-icons-link:hover .clients-svg,
 .clients-icons-link:focus .clients-svg {
     fill: var(--accent-color);
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);}
+}
 
 /* ================== FOOTER ===================== */
 
@@ -551,6 +566,8 @@ ul {
     padding: 12px;
     justify-content: center;
     background-color: var(--footer-bg-icon-color);
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-svg {
@@ -562,8 +579,6 @@ ul {
 .footer-icons-link:hover,
 .footer-icons-link:focus {
     background-color: var(--accent-color);
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /*  ============== MODAL ============== */
@@ -642,6 +657,9 @@ ul {
     cursor: pointer;
     padding: 6px 22px;
     border-radius: 4px;
+
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .filter-list .item-button:hover, 
@@ -649,8 +667,6 @@ ul {
     color: var(--white-text-color);
     background-color: var(--accent-color);
     box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* -- КАРТОЧКИ -- */
