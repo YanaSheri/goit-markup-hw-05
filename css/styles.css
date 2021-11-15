@@ -316,12 +316,11 @@ ul {
 
 .works-item-link{
     position: relative;
-
     text-decoration: none;
 }
 
 /* .works-img {
-    display: block;
+    display: flex;
 } */
 
 .works-item-subblock {
@@ -331,6 +330,7 @@ ul {
     padding-top: 27px;
     padding-bottom: 27px;
     background-color: rgba(47, 48, 58, 0.8);
+    /* z-index: 1; */
 }
 
 .works-item-title {
@@ -574,6 +574,10 @@ ul {
     height: 100vh;
     top: 0;
     background-color: rgba(0, 0, 0, 0.2);
+    opacity: 1;
+    /* transition-duration: 1000ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition: opacity; */
 }
 
 .modal {
